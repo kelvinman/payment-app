@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/payment.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Payment</title>
+  </head>
+
+  <body class="white">
+
+    <nav>
+        <div class="nav-wrapper green">
+            <a href="#!" class="brand-logo">PAYMENT</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Transaction</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="index.html">Transaction</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="cell example example2">
+        <form>
+            <div data-locale-reversible>
+                <div class="row">
+                    <div class="field">
+                        <input id="example2-address" data-tid="elements_examples.form.address_placeholder" class="input empty" type="text" placeholder="10055 Slater Ave" required="">
+                        <label for="example2-address" data-tid="elements_examples.form.address_label">Address</label>
+                        <div class="baseline"></div>
+                    </div>
+                </div>
+                <div class="row" data-locale-reversible>
+                    <div class="field half-width">
+                        <input id="example2-city" data-tid="elements_examples.form.city_placeholder" class="input empty" type="text" placeholder="Fountain Valley" required="">
+                        <label for="example2-city" data-tid="elements_examples.form.city_label">City</label>
+                        <div class="baseline"></div>
+                </div>
+                <div class="field quarter-width">
+                    <input id="example2-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required="">
+                    <label for="example2-state" data-tid="elements_examples.form.state_label">State</label>
+                    <div class="baseline"></div>
+                </div>
+                <div class="field quarter-width">
+                    <input id="example2-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="92708" required="">
+                    <label for="example2-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
+                    <div class="baseline"></div>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    <div id="example2-card-number" class="input empty"></div>
+                    <label for="example2-card-number" data-tid="elements_examples.form.card_number_label">Card number</label>
+                    <div class="baseline"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="field half-width">
+                    <div id="example2-card-expiry" class="input empty"></div>
+                    <label for="example2-card-expiry" data-tid="elements_examples.form.card_expiry_label">Expiration</label>
+                    <div class="baseline"></div>
+                </div>
+                <div class="field half-width">
+                    <div id="example2-card-cvc" class="input empty"></div>
+                    <label for="example2-card-cvc" data-tid="elements_examples.form.card_cvc_label">CVC</label>
+                    <div class="baseline"></div>
+                </div>
+            </div>
+            <button type="submit" data-tid="elements_examples.form.pay_button">Pay $25</button>
+        </form>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/payment.js"></script>
+  </body>
+</html>
